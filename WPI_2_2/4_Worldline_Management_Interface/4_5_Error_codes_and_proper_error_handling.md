@@ -1,4 +1,4 @@
-[BACK](./4_3_Terminal_unregistration.md)
+[BACK](./4_4_Terminal_unregistration.md)
 ## 4.5 Error codes and proper error handling
 
 |Error condition|Description|
@@ -14,4 +14,5 @@
 |WMI_ERR_PERMISSION|To old version of Tap on Mobile application. Upgrade to newest is needed|
 
 [NEXT](../5_Tap_on_Mobile_backend_API/5_Tap_on_Mobile_backend_API.md)
+
 
