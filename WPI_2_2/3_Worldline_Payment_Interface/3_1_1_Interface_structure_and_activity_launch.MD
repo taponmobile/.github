@@ -76,6 +76,7 @@ Intent contains a set of extras and needs to have `FLAG_ACTIVITY_REORDER_TO_FRON
 |----------|
 |The important thing to note is that ToM can only handle one intent invocation at a time (of any intent type — it doesn’t matter whether it’s a financial or informational function). Therefore, it is crucial to make the next request only after receiving the response from the previous one.|
 
+<!--
 If you want to see what a sample working code looks like, you can use the projects below.
 |Programming language| Project |
 |----------|-----------|
@@ -84,5 +85,6 @@ If you want to see what a sample working code looks like, you can use the projec
 |Java|https://gitlab.softpos.eu/samples/wpi-example-java|
 |Kotlin-compose|https://gitlab.softpos.eu/samples/wpi-example-kotlin-compose|
 |Kotlin-XML|https://gitlab.softpos.eu/samples/wpi-example-kotlin-xml|
+-->
 
 [NEXT](./3_1_2_Payment.MD)
