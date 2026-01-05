@@ -9,3 +9,5 @@
 |AUTHENTICATED|Technical status (should not be expected) indicating that Tap on Mobile application still performs configuration activities|
 |ACTIVE|Tap on Mobile application is authenticated and ready to perform payment acceptance functions (WPI);|
 |ERROR|Tap on Mobile application crash|
+
+[NEXT](../Appendix_D_Testing_procedure/D_Testing_procedure.md)
