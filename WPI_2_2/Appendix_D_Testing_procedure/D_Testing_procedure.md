@@ -1,4 +1,6 @@
-# Appendix E - Testing procedure
+[BACK](../Appendix_C_Dictionaries/C_3_Application_statuses.md)
+
+# Appendix D - Testing procedure
 Integration development is made on test environment. Test environment supports any cards for the following worldwide card brands:
 - Visa
 - V-Pay
@@ -47,4 +49,5 @@ There are separated apps dedicated for particular Worldline acquirers:
 |KB Smart|eu.softpos.softposwrapper.kb|Czechia|
 |ANZ Worldline|eu.softpos.softposwrapper.wlanz|Australia|
 
-[NEXT](../Appendix_F_Network_settings/F_Network_settings.md)
+[NEXT](../Appendix_E_Network_settings/E_Network_settings.md)
+
