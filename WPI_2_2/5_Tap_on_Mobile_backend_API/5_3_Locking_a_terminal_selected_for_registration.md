@@ -30,4 +30,5 @@ Complete list of response elements is available in ToM API specification (https:
 |expiry_date|Registration token expiry timestamp|String (timestamp)|Mandatory|
 |created|Registration token creation timestamp|String (timestamp)|Mandatory|
 
+
 [NEXT](../Appendix_A_How_to_register_application_manually/A_How_to_register_application_manually.md)
