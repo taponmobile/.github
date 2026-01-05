@@ -13,4 +13,5 @@
 |WMI_ERR_COND_TERMINAL_BUSY|Terminal communication is exclusively restricted to another 3rd party application package|
 |WMI_ERR_PERMISSION|To old version of Tap on Mobile application. Upgrade to newest is needed|
 
-[NEXT](../5 Tap on Mobile backend API/5. Tap on Mobile backend API.md)
+[NEXT](../5_Tap_on_Mobile_backend_API/5_Tap_on_Mobile_backend_API.md)
+
