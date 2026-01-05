@@ -1,5 +1,5 @@
 [BACK](../Appendix_D_Testing_procedure/D_Testing_procedure.md)
-# Appendix F - Network settings
+# Appendix E - Network settings
 Tap on Mobile application connects to various endpoints, depending on the acquirer.
 
 **Sandbox:**
@@ -31,3 +31,4 @@ Tap on Mobile application connects to various endpoints, depending on the acquir
 Every Tap on Mobile requires also access to Google Services hosts:
 - https://www.googleapis.com
 - https://maps.googleapis.com
+
