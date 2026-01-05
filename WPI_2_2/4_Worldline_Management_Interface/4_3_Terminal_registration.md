@@ -14,4 +14,5 @@ This function is intended to be used outside of payment acceptance context to de
 |errorCondition|Specific error reason <br><br> For more information check [4.5 Error codes and proper error handling](./4_5_Error_codes_and_proper_error_handling.md)|String|Mandatory|
 |remark|Terminal / transaction specific message for detailed error descriptions. Text provided by payment app.|String|Conditional – only for NOT successful transaction|
 
-[NEXT](./4_3_Terminal_unregistration.md)
+[NEXT](./4_4_Terminal_unregistration.md)
+
