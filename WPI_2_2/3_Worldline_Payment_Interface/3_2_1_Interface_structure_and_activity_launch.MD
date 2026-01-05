@@ -68,11 +68,13 @@ Intent contains a set of extras and needs to have `FLAG_ACTIVITY_REORDER_TO_FRON
         return resp;
     }
 ```
+
 |Please remember|
 |----------|
 |The important thing to note is that ToM can only handle one intent invocation at a time (of any intent type — it doesn’t matter whether it’s a financial or informational function). Therefore, it is crucial to make the next request only after receiving the response from the previous one.|
 
 
 [NEXT](./3_2_2_Last transaction.MD)
+
 
 
