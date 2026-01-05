@@ -1,4 +1,4 @@
-[BACK](./3_2_2_Last transaction.MD)
+[BACK](./3_2_2_Last_transaction.MD)
 
 ## 3.3 Error codes and proper error handling
 The list of potential errors that may be returned by WPI is presented in the table below.
@@ -35,5 +35,6 @@ When handling errors, the following should be taken into account:
 - The intent may return an empty response (for example, in the case of an application crash).
 
 Therefore, for selected error types and in situations where an empty response is received, the `LAST_TRANSACTION` function should additionally be used to confirm the transaction result. The correct algorithm is shown in the diagram below.
+
 
 ![Graph](./jpg/error.jpg)
