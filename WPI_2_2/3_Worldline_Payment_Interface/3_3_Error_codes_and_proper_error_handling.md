@@ -38,3 +38,6 @@ Therefore, for selected error types and in situations where an empty response is
 
 
 ![Graph](./jpg/error.jpg)
+
+[NEXT](../4_Worldline_Management_Interface/4_1_Interface_structure_and_activity_launch.MD)
+
