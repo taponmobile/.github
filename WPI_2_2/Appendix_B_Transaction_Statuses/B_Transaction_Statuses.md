@@ -21,7 +21,7 @@
 |CANCEL_FAILED|Transction not cancelled due to various errors or when number of Scheduler retries reaches retry limit. This status can be treated as CANCELLED.|Final status. The transaction should be treated as canceled.|X|X||
 |REJECTED|Other interruptions.|Final status. The transaction ended with an error.|X|||
 |REFUNDED|Transaction refunded.|Final status. The transaction was refunded.|X|X||
-|AUTHORIZED|Transaction authorized.|Final status. Transaction successfuly authorised.||||
+|AUTHORIZED|Transaction authorized.|Final status. Transaction successfuly authorised.|X|||
 |ERROR|Transaction processing failed.|Final status. The transaction ended with an error.|X|||
 |DCC_REQUIRED|Customer is asked to accept/reject a DCC offer.|Transitional status. If a transaction has this status after the intent is completed (payment/refund), it will not be completed successfully. It will be automatically canceled after no more than several minutes.|X|||
 
@@ -69,3 +69,4 @@
 
 
 [NEXT](../Appendix_C_Dictionaries/C_1_brandName.md)
+
