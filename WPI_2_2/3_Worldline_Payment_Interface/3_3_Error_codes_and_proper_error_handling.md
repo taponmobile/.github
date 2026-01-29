@@ -26,8 +26,7 @@ The list of potential errors that may be returned by WPI is presented in the tab
 |WPI_ERR_COND_USER_CANCEL|Transaction cancelled by user before authorisation.|
 |WPI_ERR_COND_WPI_VERSION_NOT_SUPPORTED|- Wrong, not suported version of WPI<br>- Wrong ToM application version<br>- Atestation error.|
 |WPI_ERR_TLP_NOT_FINALIZED|Estey and TLP specific error - terminal is managed by TLP but activation not completed. At this moment, transaction can be performed on this terminal.|
-|WPI_ERR_UPDATE_REQUIRED|A newer version of the transaction is available and the user interrupted the intent call to download it.|
-|WPI_ERR_UPDATE_REQUIRED|An application update is required, but the user refused the update.|
+|WPI_ERR_UPDATE_REQUIRED|- A newer version of the transaction is available and the user interrupted the intent call to download it.<br> - An application update is required, but the user refused the update.|
 
 
 When handling errors, the following should be taken into account:
@@ -40,4 +39,5 @@ Therefore, for selected error types and in situations where an empty response is
 ![Graph](./jpg/error.jpg)
 
 [NEXT](../4_Worldline_Management_Interface/4_1_Interface_structure_and_activity_launch.MD)
+
 
