@@ -1,4 +1,4 @@
-[BACK](../README.MD)
+
 # Introduction
 This documentation is intended for third-party application providers who wish to develop business applications interacting with Worldline Tap on Mobile application to provide contactless card payment functionality and covers the supplementary management processes which currently are built around the integrated registration functions.
 
@@ -25,6 +25,7 @@ Tap on Mobile provides a set of intents that developers can use to build apps th
 - WMI - provides a set of management functions necessary to register and unregister the application, as well as to check its current status
 
 *Notice*: To fully utilize WPI's capabilities, backend-to-backend integration may also be required. This enables full remote management of the available terminals.
+
 
 
 [NEXT](./1_1_Supported_perations.MD)
