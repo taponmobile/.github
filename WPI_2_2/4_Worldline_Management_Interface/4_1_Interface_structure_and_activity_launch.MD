@@ -5,10 +5,10 @@
 
 The WPI provides a set of intents that developers can use to build apps that work with the interface.
 
-For financial transaction purpose `com.worldline.management.action.PROCESS_OPERATION` intent should be used.
+For management purpose `com.worldline.management.action.PROCESS_OPERATION` intent should be used.
 |Type|Category|Intent|Purpose|
 |----------|-----------|-----------|-----------|
-|Financial|Display Action - these actions start the payment solution that are processing financial transactions or require user interaction.<br>**Notice:** Android intents are used|com.worldline.payment.action.PROCESS_TRANSACTION|Process a financial transaction|
+|Management|Display Action - these actions start the payment solution that are processing financial transactions or require user interaction.<br>**Notice:** Android intents are used|com.worldline.payment.action.PROCESS_OPERATION|Process a management request|
 
 Here is intent creation code:
 
@@ -16,7 +16,7 @@ Here is intent creation code:
     public Intent formatWmiRequest(String sessionId, WpiPurchaseRequest req) {
         String json = GSON.toJson(req);
 
-        Intent intent = new Intent("com.worldline.management.action.PROCESS_OPERATION");
+        Intent intent = new Intent("com.worldline.management.action.WMI_SVC_CHECK_STATUS");
         intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         intent.putExtra("WMI_SERVICE_TYPE", "WPI_SVC_PAYMENT");
         intent.putExtra("WMI_REQUEST", json);
