@@ -8,7 +8,7 @@ None – might be created for future use;
 ### 4.4.2 WMI_RESPONSE - list of supported output parameters
 |Field name|Description|Type|Condition|
 |----------|-----------|-----------|-----------|
-|result|Result of the transaction:<br><br>- `WPI_RESULT_SUCCESS` In case of successful transaction<br><br>- `WPI_RESULT_FAILURE` In case of failed transaction<br><br>|String|Mandatory|
+|result|Result of the transaction:<br><br>- `WMI_RESULT_SUCCESS` In case of successful transaction<br><br>- `WMI_RESULT_FAILURE` In case of failed transaction<br><br>|String|Mandatory|
 |errorCondition|Specific error reason <br><br> For more information check [4.5 Error codes and proper error handling](./4_5_Error_codes_and_proper_error_handling.md)|String|Mandatory|
 |remark|Terminal / transaction specific message for detailed error descriptions. Text provided by payment app.|String|Conditional – only for NOT successful transaction|
 
