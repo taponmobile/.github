@@ -21,12 +21,12 @@ The list of potential errors that may be returned by WPI is presented in the tab
 |WPI_ERR_COND_TIP_AMOUNT_EXCEEDS_MAXIMUM|Sended `tipAmount` is larger then limits definied for terminal.|
 |WPI_ERR_COND_TIP_NOT_SUPPORTED_BY_PAYMENT_SOLUTION|Tipping not allowed for terminal but `tipAmount` parameter was send in `WPI_REQUEST`.|
 |WPI_ERR_COND_TIP_NOT_SUPPORTED_BY_SERVICE_TYPE| `tipAmount` is not supported in this WPI functions (eg reversal does not support it)
-|WPI_ERR_COND_TLP_NOT_FINALIZED|Estey and TLP specific error - The transaction can only be refunded to the same card.|
+|WPI_ERR_COND_TLP_NOT_FINALIZED|Estey and TLP specific error - TLP processing for terminal is required but not finished, transaction can not be performed.|
 |WPI_ERR_COND_TRANSACTION_TIMEOUT|Timeout caused by the customer — the time expired for card reading, PIN entry, etc.
 |WPI_ERR_COND_USER_CANCEL|Transaction cancelled by user before authorisation.|
 |WPI_ERR_COND_WPI_VERSION_NOT_SUPPORTED|- Wrong, not suported version of WPI<br>- Wrong ToM application version<br>- Atestation error.|
 |WPI_ERR_TLP_NOT_FINALIZED|Estey and TLP specific error - terminal is managed by TLP but activation not completed. At this moment, transaction can be performed on this terminal.|
-|WPI_ERR_UPDATE_REQUIRED|- A newer version of the transaction is available and the user interrupted the intent call to download it.<br> - An application update is required, but the user refused the update.|
+|WPI_ERR_UPDATE_REQUIRED|- A newer version of the application is available and the user interrupted the intent call to download it.<br> - An application update is required, but the user refused the update.|
 
 
 When handling errors, the following should be taken into account:
