@@ -6,6 +6,7 @@ Before starting the development certain preconditions need to be met, i.e.:
 - 3rd party app package needs to be whitelisted in sandbox environment;
 - Organization structure for test merchant should be configured in sandbox environment;
 - OAuth2 access credentials for ToM backend need to be provisioned and exchanged;
+- Network traffic on devices must be open to Worldline and Google servers (see Appendix E)
 
 
 Tap on Mobile package names (Worldline Acquiring entities use different mobile application package names):
