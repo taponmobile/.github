@@ -23,6 +23,7 @@ Tap on Mobile provides a set of intents that developers can use to build apps th
 - WPI Financial operations - offers the possibility of performing a financial operation: payment, reversal, refund, credit
 - WPI Information operations – offers the ability to check the status of the last performed transaction
 - WMI - provides a set of management functions necessary to register and unregister the application, as well as to check its current status
+- MPPA - mobile Pass-Through Processing API 
 
 *Notice*: To fully utilize WPI's capabilities, backend-to-backend integration may also be required. This enables full remote management of the available terminals.
 
