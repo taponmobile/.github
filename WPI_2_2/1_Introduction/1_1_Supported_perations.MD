@@ -39,6 +39,18 @@ It offers the following services:
 |----------|-----------|
 |WPI_SVC_LAST_TRANSACTION| Used to return the last (previous) transaction result. In case of the last payment transaction response is not known any more, it can be requested by this service. It will return the last financial transaction response independent of the result, failed or success. This is a recovery feature as the payment solution will remember the last SESSION_ID as well as corresponding transaction response. |
 
+### 1.1.4 MPPA (Mobile Pass-Through Processing API) 
+**Intent:** eu.softpos.softposwrapper.axis
+
+A transaction-processing flow will - in this flow ToM Backend does not offer authorization and clearing functions. The transaction EMV data and, optionally, the transaction PIN block can be retrieved directly from the ToM Backend in encrypted form. ToM app is used only to read the card and collect the PIN. 
+
+MPPA  offers the following services:
+|Service type|Description|
+|----------|-----------|
+|MPPA_SVC_READ_CARD| Displays approach card screen and performs card processing |
+|MPPA_SVC_COLLECT_PIN| Displays pin entry screen and performs pin collection |
+|MPPA_SVC_CANCEL| Initiate transaction cancellation (cleaning sensitive data on ToM backend side) |
+
 [NEXT](./1_2_Versioning.MD)
 
 
