@@ -24,4 +24,7 @@ Tap on Mobile application versions supports following WPI versions:
 ### Wordline Managment Interface (WPI)
 WMI is not versioned. Full downward compatibility is maintained as new functionality is added.
 
+### Mobile Pass-Through Processing API (MPPA) 
+MPPA is not versioned. Full downward compatibility is maintained as new functionality is added.
+
 [NEXT](./1_3_Before_you_start_integration.MD)
