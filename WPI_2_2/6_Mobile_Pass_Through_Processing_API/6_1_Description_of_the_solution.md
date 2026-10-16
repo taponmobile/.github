@@ -26,4 +26,4 @@ Described processing is presented on the diagram below:
 
 ![Graph](./jpg/2.jpg)
 
-[NEXT](./devnull.md)
+[NEXT](./6_2_Interface_structure_and_activity_launch.md)
