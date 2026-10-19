@@ -1,5 +1,5 @@
 [BACK](./6_4_PIN_collect.md)
-## 6.4 Cancel the PTP transaction record
+## 6.5 Cancel the PTP transaction record
 MPPA_SVC_CANCEL initiate transaction cancellation (cleaning sensitive data on ToM backend side).
 
 **Prerequisites:**
@@ -7,7 +7,7 @@ MPPA_SVC_CANCEL initiate transaction cancellation (cleaning sensitive data on To
 - Terminal properly registered (paired with the ToM backend system).
 - MPPA trancastion is noit in finale status (status different than PTP_COLLECTED).
 
-### 6.4.1 MPPA_REQUEST - list of supported input parameters
+### 6.5.1 MPPA_REQUEST - list of supported input parameters
 
 In `MPPA_SVC_CANCEL`, at a minimum, the id_transaction are needed. The full list of parameters is described in the table below.
 
@@ -17,7 +17,7 @@ In `MPPA_SVC_CANCEL`, at a minimum, the id_transaction are needed. The full list
 |id_transaction|ToM transaction id returned in MPPA_SVC_READ_CARD response (pattern: ^[-a-fA-F0-9]{36}$).|String|Mandatory|
 
 
-### 6.4.2 MPPA_RESPONSE - list of supported output parameters
+### 6.5.2 MPPA_RESPONSE - list of supported output parameters
 |Field name|Description|Type|Condition|
 |----------|-----------|-----------|-----------|
 |nonce|Echo from request|String|Optional|
