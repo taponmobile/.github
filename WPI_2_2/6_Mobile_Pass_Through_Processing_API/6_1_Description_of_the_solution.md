@@ -1,6 +1,6 @@
 # 6 Mobile Pass-Through Processing 
 ## 6.1	Description of the solution
-[BACK](./devnull.md)
+[BACK](../5_Tap_on_Mobile_backend_API/5_Tap_on_Mobile_backend_API.md)
 
 A new acquirer will be created for PTP integration, and all required card brands will be configured for it. These brands will also be enabled on PTP terminal profiles. Some parameters such as supported brands, transaction types and limits will be configured on a merchant level. This configuration will limit terminal configuration assigned to it by terminal profile.
 
