@@ -31,6 +31,15 @@
 ## [5.1 ToM backend API OAuth2 authentication](../WPI_2_2/5_Tap_on_Mobile_backend_API/5_1_ToM_backend_API_OAuth2_authentication.md)
 ## [5.2 Retrieving and managing merchant’s terminal structure](../WPI_2_2/5_Tap_on_Mobile_backend_API/5_2_Retrieving_and_managing_merchants_terminal_structure.md)
 ## [5.3 Locking a terminal selected for registration](../WPI_2_2/5_Tap_on_Mobile_backend_API/5_3_Locking_a_terminal_selected_for_registration.md)
+# 6. Mobile Pass-Through Processing
+## [6.1 Description of the solution](../6_Mobile_Pass_Through_Processing_API/6_1_Description_of_the_solution.md)
+## [6.2 Interface structure and activity launch](../6_Mobile_Pass_Through_Processing_API/6_2_Interface_structure_and_activity_launch.md)
+## [6.3 Read the card data](../6_Mobile_Pass_Through_Processing_API/6_3_Read_card.md)
+## [6.4 Collect the PIN](../6_Mobile_Pass_Through_Processing_API/6_4_PIN_collect.md)
+## [6.4 Cancel the PTP transaction record](../6_Mobile_Pass_Through_Processing_API/6_5_trx_cancel.md)
+## [6.5 BPPA Interface](../6_Mobile_Pass_Through_Processing_API/6_6_BPPA_interface.md)
+## [6.6 PTP transaction statuses](../6_Mobile_Pass_Through_Processing_API/6_7_PTP_transaction_statuses.md)
+## [6.7 MPPA error codes](../6_Mobile_Pass_Through_Processing_API/6_8_MPPA_error_codes.md)
 # [Appendix A - How to register application manually](../WPI_2_2/Appendix_A_How_to_register_application_manually/A_How_to_register_application_manually.md)
 # [Appendix B - Transaction Statuses](../WPI_2_2/Appendix_B_Transaction_Statuses/B_Transaction_Statuses.md)
 # Appendix C - Dictionaries
