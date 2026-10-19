@@ -17,4 +17,4 @@ Table presented below contains transaction statuses that may occur during PTP pr
 |PTP_READ|Status related to PTP. Card data has been collected and can be shared with integrator|
 |PTP_COLLECTED|Status related to PTP. Transaction finished – card data collected by integrator.|
 
-[NEXT](./6_8_MPPA_error_codes.md.md)
+[NEXT](./6_8_MPPA_error_codes.md)
