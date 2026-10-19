@@ -1,6 +1,6 @@
 [BACK](./6_6_BPPA_interface.md)
 
-## PTP transaction statuses
+## 6.6 PTP transaction statuses
 Diagram below presents transaction statuses in pass-through processing mode.
 ![Graph](./jpg/3.jpg)
 
