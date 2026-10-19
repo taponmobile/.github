@@ -1,5 +1,6 @@
 [BACK](./6_7_PTP_transaction_statuses.md)
 
+## 6.7 MPPA error codes
 Following error codes may be returned by MPPA.
 |Error code|Description|
 |---------|-----------|
