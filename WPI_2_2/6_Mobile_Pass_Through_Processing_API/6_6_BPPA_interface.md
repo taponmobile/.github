@@ -1,5 +1,5 @@
 [BACK](./6_5_trx_cancel.md)
-## 6.5 BPPA Interface
+## 6.6 BPPA Interface
 
 The BPPA authentication method is mTLS. Following parameters will be required for access:
 
@@ -16,25 +16,25 @@ The BPPA authentication method is mTLS. Following parameters will be required fo
 - Default TTL: **1 year**
 - Maximum TTL: **10 years**
 
-### 6.5.1 PTP Transaction Data
+### 6.6.1 PTP Transaction Data
 
 PTP transaction data can be obtained using the BPPA transaction data collection endpoint.
 
 The `ptp_token` must be provided in the request. The token is returned in the MPPA response by the ToM application.
 
-#### 6.5.1.1 Endpoint
+#### 6.6.1.1 Endpoint
 
 ```http
 POST /bppa/v1/ptp-data/collect
 ```
 
-#### 6.5.1.2 Request
+#### 6.6.1.2 Request
 
 | Field | Location | Mandatory | Type | Description |
 |---------|----------|----------|---------|-------------|
 | ptp_token | Body | Yes | String (JWT) | PTP token |
 
-#### 6.5.1.3 Processing Rules
+#### 6.6.1.3 Processing Rules
 
 - The `ptp_token` must be validated by vpos-main.
 - If valid, `transaction_id` and `merchant_id` are extracted from the token.
@@ -46,7 +46,7 @@ POST /bppa/v1/ptp-data/collect
   - `PIN_REQUESTED`
   - `PTP_COLLECTED`
 
-#### 6.5.1.4 Response
+#### 6.6.1.4 Response
 
 | Code | Description |
 |--------|-------------|
@@ -55,7 +55,7 @@ POST /bppa/v1/ptp-data/collect
 
 ---
 
-### 6.5.2 PTPTransactionData
+### 6.6.2 PTPTransactionData
 
 | Field | Mandatory | Type | Description |
 |---------|-----------|------|-------------|
@@ -71,7 +71,7 @@ POST /bppa/v1/ptp-data/collect
 
 ---
 
-### 6.5.3 ProblemDetails
+### 6.6.3 ProblemDetails
 
 Problem Details extended with additional fields:
 
@@ -79,7 +79,7 @@ Problem Details extended with additional fields:
 - `error_code`
 - `additionalInfo`
 
-#### 6.5.3.1 Structure
+#### 6.6.3.1 Structure
 
 | Field | Mandatory | Type | Description |
 |---------|-----------|------|-------------|
@@ -94,19 +94,19 @@ Problem Details extended with additional fields:
 
 ---
 
-### 6.5.4 Encrypted Payload
+### 6.6.4 Encrypted Payload
 
 Transaction payload is created based on acquirer configuration (`trrd:tags`).
 
 Payload format: **TLV**
 
-#### 6.5.4.1 Example Unencrypted Payload
+#### 6.6.4.1 Example Unencrypted Payload
 
 ```text
 57 13 49 40 36 27 07 63 88 04 D2 51 12 01 17 06 43 83 00 00 0F 5F 34 01 00
 ```
 
-#### 6.5.4.2 Encryption Process
+#### 6.6.4.2 Encryption Process
 
 1. Payload is built in TLV format.
 2. Payload is sent to Cryptohub.
