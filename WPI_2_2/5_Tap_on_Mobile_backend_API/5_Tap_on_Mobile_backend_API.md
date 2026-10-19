@@ -9,4 +9,4 @@ This integration process requires covering the following areas:
 2. The logic to retrieve and manage merchant terminals structure in 3rd party application backend;
 3. The logic to lock free terminal selected for registration.
 
-[NEXT](./5_1_ToM_backend_API_OAuth2_authentication.md)
+[NEXT](../6_Mobile_Pass_Through_Processing_API/6_1_Description_of_the_solution.md)
