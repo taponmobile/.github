@@ -1,4 +1,4 @@
-[BACK](../6_1_Description_of_the_solution.md)
+[BACK](./6_1_Description_of_the_solution.md)
 
 ## 6.2 Interface structure and activity launch
 
