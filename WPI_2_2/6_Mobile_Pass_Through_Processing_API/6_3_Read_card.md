@@ -34,6 +34,7 @@ In `MPPA_SVC_READ_CARD`, at a minimum, the currency, requested amount and transa
 |external_transaction_id|External transaction id|String|Optional for MPPA_OK|
 |id_transaction|ToM transaction id. For cancellation original transaction id is returned|String|Mandatory for MPPA_OK|
 |transaction_date|Transaction datetime in local time (i.e. "2025-07-29T14:53:16+0200")|String (datetime)|Mandatory for MPPA_OK|
+|transaction_status|Transaction status.<br><br>For **PIN_REQUESTED** - pin collection intent should be sent before card data collection<br><br>**PTP_READ** – card read completed.|String|Mandatory for MPPA_OK|
 |ptp_non_sensitive_tags|PTP non sensitive tags returned by host|String (Base64)|Mandatory for MPPA_OK|
 |masked_pan|Masked pan containing BIN on first 8 characters.|String|Mandatory for MPPA_OK|
 |kernel_outcome|Kernel processing outcome |String - Eum ("NA", "SELECT_NEXT", "TRY_AGAIN", "APPROVED", "DECLINED", "ONLINE_REQUEST", "TRY_ANOTHER_INTERFACE", "END_APPLICATION", "OUTCOME_REQUEST_SIGNATURE", "REQUEST_ONLINE_PIN", "ONLINE_REQUEST_TWO_PRESENTMENTS", "ONLINE_REQUEST_PRESENT_AND_HOLD", "END_APPLICATION_WITH_RESTART", "OUTCOME_EXTENSION_EXECUTE_ 3RD_PARTY_MASTERCARD_KERNEL", "TRANSACTION_PROCESSING_ERROR")|Optional - only if communication with the card took place and kernel returned outcome|
