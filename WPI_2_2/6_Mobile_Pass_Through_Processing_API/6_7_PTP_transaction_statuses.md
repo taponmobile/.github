@@ -1,4 +1,5 @@
 [BACK](./6_6_BPPA_interface.md)
+
 Diagram below presents transaction statuses in pass-through processing mode.
 ![Graph](./jpg/3.jpg)
 
