@@ -31,4 +31,4 @@ In `WPI_SVC_CANCEL_PAYMENT` at minimum the paymentSolutionReference (UUID of rev
 |terminalIdentifier|Terminal unique identifier (MID)|String|Mandatory|
 |terminalIdentifierLong|Terminal identifier build as (Platform Identifier)-(Merchant Identifier)-(Platform Terminal identifier)|String|Mandatory|
 
-[NEXT](./3_1_5_1_Receipt_Format.md)
+[NEXT](./3_1_5_Preauthorization.md)
