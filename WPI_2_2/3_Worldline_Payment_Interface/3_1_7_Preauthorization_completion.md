@@ -9,7 +9,7 @@ The completion amount must not exceed the amount of the referenced preauthorizat
 - Terminal properly registered (paired with the ToM backend system).
 - An active, authorized, unexpired preauthorization is available for completion.
 - Transaction currency and parameters must be in accordance with the terminal profile.
-- An existing pre-authorization, which the merchant has the right to modify
+- An existing preauthorization, which the merchant has the right to modify
 
 #### 3.1.8.1 WPI_REQUEST - list of supported input parameters
 
