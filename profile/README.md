@@ -12,12 +12,12 @@
 ### [3.1.2 Payment](../WPI_2_2/3_Worldline_Payment_Interface/3_1_2_Payment.MD)
 ### [3.1.3 Refund and Credit](../WPI_2_2/3_Worldline_Payment_Interface/3_1_3_Refund_and_Credit.MD)
 ### [3.1.4 Reversal](../WPI_2_2/3_Worldline_Payment_Interface/3_1_4_Reversal.MD)
-### 3.1.5 Preauthorization
-### 3.1.6 Preauthorization update
-### 3.1.7 Preauthorization completion
-### 3.1.8 Preauthorization reversal
-### 3.1.9 Preauthorization completion reversal
-### 3.1.10 Additional functionalities
+### [3.1.5 Preauthorization](../WPI_2_2/3_Worldline_Payment_Interface/3_1_5_Preauthorization.md)
+### [3.1.6 Preauthorization update](../WPI_2_2/3_Worldline_Payment_Interface/3_1_6_Preauthorization_update.md)
+### [3.1.7 Preauthorization completion](../WPI_2_2/3_Worldline_Payment_Interface/3_1_7_Preauthorization_completion.md)
+### [3.1.8 Preauthorization reversal](../WPI_2_2/3_Worldline_Payment_Interface/3_1_8_Preauthorization_reversal.md)
+### [3.1.9 Preauthorization completion reversal](../WPI_2_2/3_Worldline_Payment_Interface/3_1_9_Preauthorization_completion_reversal.md)
+### [3.1.10 Additional functionalities]
 #### [3.1.10.1 Receipt Format](../WPI_2_2/3_Worldline_Payment_Interface/3_1_10_1_Receipt_Format.md)
 #### [3.1.10.2 Transactions on Behalf](../WPI_2_2/3_Worldline_Payment_Interface/3_1_10_2_Transactions_on_Behalf.md)
 #### [3.1.10.3 Tipping](../WPI_2_2/3_Worldline_Payment_Interface/3_1_10_3_Tipping.md)
