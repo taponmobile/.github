@@ -1,6 +1,6 @@
-[BACK](./3_1_5_2_Transactions_on_Behalf.md)
+[BACK](./3_1_10_2_Transactions_on_Behalf.md)
 
-#### 3.1.5.3 Tipping
+#### 3.1.10.3 Tipping
 Tap on Mobile allows adding a tip to a transaction. This functionality can be enabled by an Administrator for selected clients.
 
 If tips are enabled for a terminal, two scenarios are possible:
@@ -16,4 +16,4 @@ Note: If tips are disabled for the terminal but a tipAmount value is sent in the
     (...)
 }
 ```
-[NEXT](./3_1_5_4_Checkouts.md)
+[NEXT](./3_1_10_4_Checkouts.md)
