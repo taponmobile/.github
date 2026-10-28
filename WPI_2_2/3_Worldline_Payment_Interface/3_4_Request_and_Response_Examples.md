@@ -1,6 +1,6 @@
 ## 3.4 Request and Response Examples
 
-### 1. Successful Card Payment Without a Tip or DCC
+### 1. Successful card payment without a tip or DCC
 
 #### Assumptions
 
