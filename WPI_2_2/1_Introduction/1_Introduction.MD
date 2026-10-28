@@ -20,7 +20,7 @@ Intents can also carry data in the form of key-value pairs, called Extras, which
 More information about Intents can be found in native [Google Android documentation](https://developer.android.com/guide/components/intents-filters).
 
 Tap on Mobile provides a set of intents that developers can use to build apps that work with the interface. The following intents are available:
-- WPI Financial operations - offers the possibility of performing a financial operation: payment, reversal, refund, credit
+- WPI Financial operations - offers the possibility of performing a financial operation: payment, reversal, refund, credit, preauthorization
 - WPI Information operations – offers the ability to check the status of the last performed transaction
 - WMI - provides a set of management functions necessary to register and unregister the application, as well as to check its current status
 - MPPA - mobile Pass-Through Processing API 
