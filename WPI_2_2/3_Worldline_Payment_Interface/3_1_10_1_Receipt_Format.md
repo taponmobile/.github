@@ -1,6 +1,6 @@
 [BACK](./3_1_4_Reversal.MD)
 
-#### 3.1.5.1 Receipt Format
+#### 3.1.10.1 Receipt Format
 
 Tap on Mobile provides three options for transaction confirmation.
 1. A text-based confirmation returned in the intent response.
