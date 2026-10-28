@@ -9,7 +9,7 @@ A successful preauthorization update replaces the previous preauthorization. The
 - Terminal properly registered (paired with the ToM backend system).
 - An active, authorized, unexpired preauthorization is available for update.
 - Transaction currency and parameters must be in accordance with the terminal profile.
-- An existing pre-authorization, which the merchant has the right to modify
+- An existing preauthorization, which the merchant has the right to modify
 
 #### 3.1.6.1 WPI_REQUEST - list of supported input parameters
 
