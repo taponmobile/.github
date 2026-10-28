@@ -8,6 +8,7 @@ The request identifies the preauthorization or its latest successful update by `
 - ToM application correctly installed.
 - Terminal properly registered (paired with the ToM backend system).
 - The referenced preauthorization is authorized and has not expired.
+- An existing preauthorization, which the merchant has the right to modify
 
 #### 3.1.8.1 WPI_REQUEST - list of supported input parameters
 
