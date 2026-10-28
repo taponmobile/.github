@@ -26,8 +26,11 @@ It offers the following services:
 |WPI_SVC_PAYMENT|Service type for a purchase|
 |WPI_SVC_CANCEL_PAYMENT|Service type for a reversal of a previous transaction|
 |WPI_SVC_REFUND|Service type for a refund of a previous transaction or for credit operation|
-
-
+|WPI_SVC_PRE_AUTHORIZATION|Service type for a preauthorization|
+|WPI_SVC_UPDATE_PRE_AUTHORIZATION|Service type for a preauthorization update|
+|WPI_SVC_PAYMENT_COMPLETION|Service type for a preauthorization completion|
+|WPI_SVC_CANCEL_PRE_AUTHORIZATION|Service type for a reversal of a preauthorization|
+|WPI_SVC_CANCEL_PAYMENT_COMPLETION|Service type for a reversal of a preauthorization completion| 
 
 ### 1.1.3 WPI Information Operations 
 **Intent:** com.worldline.payment.action.PROCESS_INFORMATION
