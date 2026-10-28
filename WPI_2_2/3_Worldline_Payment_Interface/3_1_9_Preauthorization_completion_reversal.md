@@ -31,4 +31,4 @@ The mandatory field for preauthorization completion cancellation is `paymentSolu
 |terminalIdentifier|Terminal unique identifier (TID).|String|Mandatory|
 |terminalIdentifierLong|Terminal identifier built as `(Platform Identifier)-(Merchant Identifier)-(Platform Terminal identifier)`.|String|Mandatory|
 
-[BACK](./3_1_10_1_Receipt_Format.md)
+[NEXT](./3_1_10_1_Receipt_Format.md)
