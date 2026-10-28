@@ -1,6 +1,6 @@
-[BACK](./3_1_5_1_Receipt_Format.md)
+[BACK](./3_1_10_1_Receipt_Format.md)
 
-#### 3.1.5.2 Transactions on Behalf
+#### 3.1.10.2 Transactions on Behalf
 Multimerchant functionality allows selected terminals to perform transactions on behalf of other merchants/terminals.
 
 The functionality can be enabled by an Administrator for selected clients. In this case, a merchant can be associated with two types of terminals:
@@ -30,4 +30,4 @@ An example of the minimal set of parameters required to perform an on-behalf tra
 }
 ```
 
-[NEXT](./3_1_5_3_Tipping.md)
+[NEXT](./3_1_10_3_Tipping.md)
