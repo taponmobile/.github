@@ -132,4 +132,4 @@ For `"receiptFormat": []`, the transaction flow ends with the screen below.
 
 The user has the option to either send the confirmation via email in PDF format (1) or display a QR code that allows downloading the PDF confirmation (2).
 
-[NEXT](./3_1_5_2_Transactions_on_Behalf.md)
+[NEXT](./3_1_10_2_Transactions_on_Behalf.md)
