@@ -1,4 +1,4 @@
-[BACK](./3_1_4_Reversal.MD)
+[BACK](./3_1_9_Preauthorization_completion_reversal.md)
 
 #### 3.1.10.1 Receipt Format
 
