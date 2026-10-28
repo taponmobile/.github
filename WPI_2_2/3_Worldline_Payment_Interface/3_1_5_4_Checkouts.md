@@ -1,6 +1,6 @@
-[BACK](./3_1_5_3_Tipping.md)
+[BACK](./3_1_10_3_Tipping.md)
 
-#### 3.1.5.4 Checkouts
+#### 3.1.10.4 Checkouts
 
 For acquirers having ‘checkout id’ verification enabled, verification of checkout is mandatory during transaction initialization. 
 
