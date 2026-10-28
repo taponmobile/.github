@@ -18,7 +18,7 @@
 ### 3.1.8 Preauthorization reversal
 ### 3.1.9 Preauthorization completion reversal
 ### 3.1.10 Additional functionalities
-#### [3.1.10.1 Receipt Format](../WPI_2_2/3_Worldline_Payment_Interface/3_1_5_1_Receipt_Format.md)
+#### [3.1.10.1 Receipt Format](../WPI_2_2/3_Worldline_Payment_Interface/3_1_10_1_Receipt_Format.md)
 #### [3.1.10.2 Transactions on Behalf](../WPI_2_2/3_Worldline_Payment_Interface/3_1_5_2_Transactions_on_Behalf.md)
 #### [3.1.10.3 Tipping](../WPI_2_2/3_Worldline_Payment_Interface/3_1_5_3_Tipping.md)
 #### [3.1.10.4 Checkouts](../WPI_2_2/3_Worldline_Payment_Interface/3_1_5_4_Checkouts.md)
