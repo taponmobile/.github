@@ -88,7 +88,8 @@
  "tipAmount": 500,
  "reference": "uniqueExtId",
  "receiptFormat": ["FORMATTED"]
-}```
+}
+```
 
 #### Expected Application Behavior
 
@@ -112,10 +113,8 @@
         "currency": "PLN",
         "customerLanguage": "en",
         "errorCondition": "WPI_ERR_COND_NONE",
-        "expiryDate": "2912",
         "merchantIdentifier": "102003271",
         "onBehalf": false,
-        "onlineToken": "7ed47b13-689a-4f0a-abca-047e510c96f0",
         "paymentSolutionReference": "fd9d7be8-6e82-4db6-b967-3824b49ea58d",
         "receipt": {
             "formatted": {
