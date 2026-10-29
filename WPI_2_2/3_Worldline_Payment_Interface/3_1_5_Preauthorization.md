@@ -48,5 +48,7 @@ The mandatory fields for preauthorization are `currency` and `requestedAmount`.
 |cardholderVerificationMethod|Cardholder verification method.|String|Conditional - mandatory for a successful transaction|
 |cardDataInput|The card data input method.|String|Conditional - mandatory for a successful transaction|
 |terminalIdentifierLong|Terminal identifier built as `(Platform Identifier)-(Merchant Identifier)-(Platform Terminal identifier)`.|String|Mandatory|
+|onlineToken|Card token|String|C <br><br>(Mandatory if card_token returned by host)|
+|expiryDate|Card expiry date|String (format YYMM)|C <br><br>(Mandatory for successful card transaction if provided – not present when hidden (****))|
 
 [NEXT](./3_1_6_Preauthorization_update.md)
