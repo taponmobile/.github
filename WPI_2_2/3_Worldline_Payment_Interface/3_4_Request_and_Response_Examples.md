@@ -131,3 +131,161 @@
     }
 ```
 Pay attention to the field specific to tips: tipAmount
+
+
+### 1. Successful card payment without a tip, with DCC
+
+#### Assumptions
+
+- WPI version: `2.2`
+- The application is registered on a terminal with TID (Terminal ID) `POSTMAN1` and MID (Merchant ID) `102003271`.
+- DCC is enabled on the terminal.
+- Tokenization is disabled.
+- The terminal currency is PLN.
+- The transaction amount is PLN 15.00.
+- The CVM threshold is set to PLN 100.
+- The payment is made with a VISA card.
+- The transaction reference (external transaction ID) is set to `uniqueExtId`.
+- `receiptFormat` is set to 'JSON'.
+- During payment DCC offer is displayed and accepted
+
+#### WPI_REQUEST
+
+```json
+{
+  "currency": "PLN",
+  "requestedAmount": 1500,
+  "reference": "uniqueExtId",
+  "receiptFormat": ["JSON"]
+}
+```
+
+#### Expected Application Behavior
+
+- If tips are enabled on the terminal, the application displays a screen for entering a tip. In this example, no tip is added. If tips are not available, this screen is skipped automatically.
+- If more than one payment method is available on the terminal, the application displays a payment method selection screen. In this example, card payment is selected. If only one payment method is available, it is selected automatically.
+- The application displays a screen prompting the customer to tap their card. In this example, the VISA card is read successfully.
+- DCC offer is presented. In this example DCC offer is accepted by user.
+- The payment scheme animation is displayed.
+- The intent completes.
+
+#### WPI_RESPONCE
+
+```json
+{
+    "WPI_SERVICE_TYPE": "WPI_SVC_PAYMENT",
+    "WPI_VERSION": "2.2",
+    "WPI_SESSION_ID": "612ce20e-9fa5-4240-88fa-f274fb03d9ad",
+    "WPI_RESPONSE": {
+        "actionCode": "WPI_ACTION_CODE_NONE",
+        "applicationIdentifier": "A0000000031010",
+        "applicationLabel": "VISA CREDIT",
+        "authorizedAmount": 1500,
+        "brandName": "WPI_BRAND_NAME_VISA",
+        "cardDataInput": "WPI_CARD_DATA_INPUT_PROXIMITY_ICC",
+        "cardholderVerificationMethod": "WPI_CVM_NO_CVM",
+        "currency": "PLN",
+        "customerLanguage": "en",
+        "dccAmount": 360,
+        "dccCurrency": "EUR",
+        "dccExchangeRate": "0.24000",
+        "dccOffered": true,
+        "dccUsed": true,
+        "errorCondition": "WPI_ERR_COND_NONE",
+        "merchantIdentifier": "102003271",
+        "onBehalf": false,
+        "paymentSolutionReference": "66492c93-cbc6-4ba1-b0d0-5122dd795f51",
+        "receipt": {
+            "json": {
+                "acquirerIdentifier": "14008500000F",
+                "additionalData": {
+                    "transactionType": "AUTH",
+                    "transactionStatus": "CLEARED",
+                    "applicationCryptogram": "85ADE1FFDAAF5516",
+                    "cid": "ARQC"
+                },
+                "amount": 1500,
+                "applicationIdentifier": "A0000000031010",
+                "authorizationCode": "00 000671",
+                "brandName": "WPI_BRAND_NAME_VISA",
+                "cardDataInput": "WPI_CARD_DATA_INPUT_PROXIMITY_ICC",
+                "cardExpiration": "2912",
+                "cardholderVerificationMethod": "WPI_CVM_NO_CVM",
+                "currency": "PLN",
+                "dccInfo": {
+                    "dccAmount": 360,
+                    "dccCurrency": "EUR",
+                    "dccDisclaimer": "I have been offered a choice of currencies and I accept the final amount in transaction currency. Currency conversion provided by Worldline.",
+                    "dccEcbIndicator": false,
+                    "dccExchangeRate": "0.24000",
+                    "dccMarkup": "21.00 %"
+                },
+                "duplicate": false,
+                "legalIdentificationRequired": false,
+                "maskedPan": "438746******9995",
+                "operatorIdentifier": "102003271",
+                "paymentSolutionReference": "66492c93-cbc6-4ba1-b0d0-5122dd795f51",
+                "receiptTargets": {
+                    "client": {
+                        "description": "List of field names of the receipt to be included for the client receipt",
+                        "items": [
+                            "shopInfo",
+                            "timestamp",
+                            "brandName",
+                            "maskedPan",
+                            "currency",
+                            "amount",
+                            "tipAmount",
+                            "dcc",
+                            "transactionStatus",
+                            "authorizationCode",
+                            "applicationCryptogram",
+                            "applicationIdentifier",
+                            "transactionType",
+                            "terminalIdentifier",
+                            "operatorIdentifier",
+                            "reference",
+                            "cardExpiration"
+                        ]
+                    },
+                    "merchant": {
+                        "description": "List of field names of the receipt to be included for the merchant receipt",
+                        "items": [
+                            "shopInfo",
+                            "timestamp",
+                            "brandName",
+                            "maskedPan",
+                            "currency",
+                            "amount",
+                            "tipAmount",
+                            "dcc",
+                            "transactionStatus",
+                            "authorizationCode",
+                            "applicationCryptogram",
+                            "applicationIdentifier",
+                            "transactionType",
+                            "terminalIdentifier",
+                            "operatorIdentifier",
+                            "reference",
+                            "cardExpiration"
+                        ]
+                    }
+                },
+                "reference": "uniqueExtId",
+                "shopInfo": {
+                    "address": "APM street 1, APM city 1234",
+                    "name": "APM TEST & Merchant"
+                },
+                "terminalIdentifier": "POSTMAN1",
+                "timestamp": "2026-10-29T14:59:53+01:00"
+            }
+        },
+        "reference": "uniqueExtId",
+        "result": "WPI_RESULT_SUCCESS",
+        "terminalIdentifier": "POSTMAN1",
+        "terminalIdentifierLong": "ToM-POSTMAN1-102003271",
+        "timestamp": "2026-10-29T14:59:53+01:00"
+    }
+}
+```
+Pay attention to the field specific to JSON receipt: receipt.json and specyfic to DCC: dccAmount, dccCurrency, dccExchangeRate, dccOffered, dccUsed": true.
