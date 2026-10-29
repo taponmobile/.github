@@ -53,3 +53,5 @@
 ## [C.3 Application statuses](../WPI_2_2/Appendix_C_Dictionaries/C_3_Application_statuses.md)
 # [Appendix D - Testing procedure](../WPI_2_2/Appendix_D_Testing_procedure/D_Testing_procedure.md)
 # [Appendix E - Network settings](../WPI_2_2/Appendix_E_Network_settings/E_Network_settings.md)
+
+[Change log](./change_log.md)
