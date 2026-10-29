@@ -54,5 +54,8 @@ In `WPI_SVC_PAYMENT`, at a minimum, the currency and requested amount are needed
 |cardDataInput|The card data input method:<br><br>- `WPI_CARD_DATA_INPUT_PROXIMITY_ICC` - for card transactions<br><br>- `WPI_CARD_DATA_INPUT_ALTERNATIVE_PAYMENT_METHOD` - for BLIK and APM transactions |String|Conditional - in case of successful transaction|
 |onBehalf |	Inform if transaction was made on behalf of partner merchant – on partner terminal|Boolean|Conditional - mandatory for transaction performed on-behalf|
 |terminalIdentifierLong|Terminal identifier built as (Platform Identifier)-(Merchant Identifier)-(Platform Terminal identifier)|String|Mandatory|
+|onlineToken|Card token|String|C <br><br>(Mandatory if card_token returned by host)|
+|expiryDate|Card expiry date|String (format YYMM)|C <br><br>(Mandatory for successful card transaction if provided – not present when hidden (****))|
+
 
 [NEXT](./3_1_3_Refund_and_Credit.MD)
