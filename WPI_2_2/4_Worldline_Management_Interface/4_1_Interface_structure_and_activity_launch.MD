@@ -1,4 +1,4 @@
-[BACK](../3_Worldline_Payment_Interface/3_3_Error_codes_and_proper_error_handling.md)
+[BACK](../3_Worldline_Payment_Interface/3_4_Request_and_Response_Examples.md)
 
 # 4. Worldline Management Interface (WMI)
 ## 4.1 Interface structure and activity launch
