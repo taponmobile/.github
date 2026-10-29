@@ -26,6 +26,7 @@
 ###	[3.2.1 Interface structure and activity launch](../WPI_2_2/3_Worldline_Payment_Interface/3_2_1_Interface_structure_and_activity_launch.MD)
 ### [3.2.2 Last transaction](../WPI_2_2/3_Worldline_Payment_Interface/3_2_2_Last_transaction.MD)
 ## [3.3 Error codes and proper error handling](../WPI_2_2/3_Worldline_Payment_Interface/3_3_Error_codes_and_proper_error_handling.md)
+## [3.4 Request and Response Examples](../WPI_2_2/3_Worldline_Payment_Interface/3_4_Request_and_Response_Examples.md)
 # 4. Worldline Management Interface (WMI)
 ## [4.1 Interface structure and activity launch](../WPI_2_2/4_Worldline_Management_Interface/4_1_Interface_structure_and_activity_launch.MD)
 ## [4.2 Checking application status](../WPI_2_2/4_Worldline_Management_Interface/4_2_Checking_application_status.md)
