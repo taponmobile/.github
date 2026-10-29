@@ -1,3 +1,4 @@
+[BACK](../3_Worldline_Payment_Interface/3_3_Error_codes_and_proper_error_handling.md)
 ## 3.4 Request and Response Examples
 
 ### 1. Successful card payment without a tip or DCC
@@ -133,7 +134,7 @@
 Pay attention to the field specific to tips: tipAmount
 
 
-### 1. Successful card payment without a tip, with DCC
+### 3. Successful card payment without a tip, with DCC
 
 #### Assumptions
 
@@ -289,3 +290,171 @@ Pay attention to the field specific to tips: tipAmount
 }
 ```
 Pay attention to the field specific to JSON receipt: receipt.json and specyfic to DCC: dccAmount, dccCurrency, dccExchangeRate, dccOffered, dccUsed": true.
+
+### 4. Successful card payment without a tip or DCC; tokenization enabled
+
+#### Assumptions
+
+- WPI version: `2.2`
+- The application is registered on a terminal with TID (Terminal ID) `POSTMAN1` and MID (Merchant ID) `102003271`.
+- DCC is disabled on the terminal.
+- **Tokenization is endabled**.
+- The terminal currency is PLN.
+- The transaction amount is PLN 15.00.
+- The CVM threshold is set to PLN 100.
+- The payment is made with a VISA card.
+- **`receiptFormat` is set to []**
+
+#### WPI_REQUEST
+
+```json
+{
+  "currency": "PLN",
+  "requestedAmount": 1500,
+  "receiptFormat": []
+}
+```
+
+#### Expected Application Behavior
+- If tips are enabled on the terminal, the application displays a screen for entering a tip. In this example, no tip is added. If tips are not available, this screen is skipped automatically.
+- If more than one payment method is available on the terminal, the application displays a payment method selection screen. In this example, card payment is selected. If only one payment method is available, it is selected automatically.
+- The application displays a screen prompting the customer to tap their card. In this example, the VISA card is read successfully.
+- The payment scheme animation is displayed.
+- Transaction summary screen is displayed.
+- The intent completes (when customer close the screen).
+
+#### WPI_RESPONCE
+
+```json
+{
+        "actionCode": "WPI_ACTION_CODE_NONE",
+        "applicationIdentifier": "A0000000031010",
+        "applicationLabel": "VISA CREDIT",
+        "authorizedAmount": 1500,
+        "brandName": "WPI_BRAND_NAME_VISA",
+        "cardDataInput": "WPI_CARD_DATA_INPUT_PROXIMITY_ICC",
+        "cardholderVerificationMethod": "WPI_CVM_NO_CVM",
+        "currency": "PLN",
+        "customerLanguage": "en",
+        "errorCondition": "WPI_ERR_COND_NONE",
+        "expiryDate": "2912",
+        "merchantIdentifier": "102003271",
+        "onBehalf": false,
+        "onlineToken": "0c367dc9-624a-40ec-af21-8d92d32f5552",
+        "paymentSolutionReference": "6676eccb-26c8-47cc-a06b-b4a19fc42eb6",
+        "result": "WPI_RESULT_SUCCESS",
+        "terminalIdentifier": "POSTMAN1",
+        "terminalIdentifierLong": "ToM-POSTMAN1-102003271",
+        "timestamp": "2026-10-29T16:35:27+01:00"
+}
+```
+
+Pay attention to the field specific to tokenization: onlineToken, expiryDate.
+<br>Pay attention that the receipt field is missing (because "receiptFormat" was set to '[]' in request).
+
+
+### 5. Card payment DECLINED by authorization host
+
+#### Assumptions
+
+- WPI version: `2.2`
+- The application is registered on a terminal with TID (Terminal ID) `POSTMAN1` and MID (Merchant ID) `102003271`.
+- The terminal currency is PLN.
+- The transaction amount is PLN 42.15.
+- The payment is made with a VISA card.
+- **Transaction declined by authorization host**
+- `receiptFormat` is not specified in the request, so the default format, `FORMATTED`, is used.
+
+#### WPI_REQUEST
+
+```json
+{
+  "currency": "PLN",
+  "requestedAmount": 4215
+}
+```
+
+#### Expected Application Behavior
+- If tips are enabled on the terminal, the application displays a screen for entering a tip. In this example, no tip is added. If tips are not available, this screen is skipped automatically.
+- If more than one payment method is available on the terminal, the application displays a payment method selection screen. In this example, card payment is selected. If only one payment method is available, it is selected automatically.
+- The application displays a screen prompting the customer to tap their card. In this example, the VISA card is read successfully.
+- **The payment scheme animation is not displayed.**
+- The intent completes.
+
+#### WPI_RESPONCE
+
+```json
+ {
+        "actionCode": "WPI_ACTION_CODE_NONE",
+        "applicationIdentifier": "A0000000031010",
+        "applicationLabel": "VISA CREDIT",
+        "authorizedAmount": 4215,
+        "brandName": "WPI_BRAND_NAME_VISA",
+        "cardDataInput": "WPI_CARD_DATA_INPUT_PROXIMITY_ICC",
+        "cardholderVerificationMethod": "WPI_CVM_NO_CVM",
+        "currency": "PLN",
+        "customerLanguage": "en",
+        "dccOffered": true,
+        "errorCondition": "WPI_ERR_COND_HOST_REFUSAL",
+        "merchantIdentifier": "102003271",
+        "onBehalf": false,
+        "paymentSolutionReference": "05cbea8d-bf42-4abe-9d2f-a886308bdc96",
+        "receipt": {
+            "formatted": {
+                "client": "This is to confirm your transaction     \n registered at:                          \n ----------------------------------------\n APM TEST & Merchant                     \n APM street 1                            \n APM city 1234                           \n ----------------------------------------\n 29.10.2026 16:45:19                     \n VISA       438746******9995             \n PLN                                42.15\n Transaction details:                    \n Status:                         DECLINED\n Authorization code:           (15)000671\n ARQC:                   3C6C18B1BE399D47\n AID:                      A0000000031010\n Contactless                             \n Card expiry date:                   2912\n Type:                               SALE\n POS ID:                         POSTMAN1\n MID:                           102003271\n Reference:                           (-)\n VISA\n ",
+                "merchant": "This is to confirm your transaction     \n registered at:                          \n ----------------------------------------\n APM TEST & Merchant                     \n APM street 1                            \n APM city 1234                           \n ----------------------------------------\n 29.10.2026 16:45:19                     \n VISA       438746******9995             \n PLN                                42.15\n Transaction details:                    \n Status:                         DECLINED\n Authorization code:           (15)000671\n ARQC:                   3C6C18B1BE399D47\n AID:                      A0000000031010\n Contactless                             \n Card expiry date:                   2912\n Type:                               SALE\n POS ID:                         POSTMAN1\n MID:                           102003271\n Reference:                           (-)\n VISA\n "
+            }
+        },
+        "remark": "Transaction failed with status: DECLINED",
+        "result": "WPI_RESULT_FAILURE",
+        "terminalIdentifier": "POSTMAN1",
+        "terminalIdentifierLong": "ToM-POSTMAN1-102003271",
+        "timestamp": "2026-10-29T16:45:19+01:00"
+}
+```
+
+Pay attention to the fields: errorCondition, remark, result.
+
+### 6. Card payment timeouted on cart presentment screen
+
+#### Assumptions
+
+- WPI version: `2.2`
+- The application is registered on a terminal with TID (Terminal ID) `POSTMAN1` and MID (Merchant ID) `102003271`.
+- The terminal currency is PLN.
+- The transaction amount is PLN 15.00.
+- The payment is made with a VISA card.
+- **Transaction timeouted on cart presentment screen**
+- `receiptFormat` is not specified in the request, so the default format, `FORMATTED`, is used.
+
+#### WPI_REQUEST
+
+```json
+{
+  "currency": "PLN",
+  "requestedAmount": 1500
+}
+```
+
+#### Expected Application Behavior
+- If tips are enabled on the terminal, the application displays a screen for entering a tip. In this example, no tip is added. If tips are not available, this screen is skipped automatically.
+- If more than one payment method is available on the terminal, the application displays a payment method selection screen. In this example, card payment is selected. If only one payment method is available, it is selected automatically.
+- The application displays a screen prompting the customer to tap their card. In this example, user waits to the moment when transaction is timeouted.
+- The intent completes.
+
+#### WPI_RESPONCE
+
+```json
+{
+        "errorCondition": "WPI_ERR_COND_TRANSACTION_TIMEOUT",
+        "merchantIdentifier": "102003271",
+        "remark": "Transaction authorization timeout (POS side)",
+        "result": "WPI_RESULT_FAILURE",
+        "terminalIdentifier": "POSTMAN1",
+        "terminalIdentifierLong": "ToM-POSTMAN1-102003271"
+}
+```
+
+Pay attention to the fields: errorCondition, remark, result.
+
+[NEXT](../4_Worldline_Management_Interface/4_1_Interface_structure_and_activity_launch.MD)
