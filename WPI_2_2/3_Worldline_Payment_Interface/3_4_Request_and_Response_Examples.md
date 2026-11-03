@@ -457,4 +457,167 @@ Pay attention to the fields: errorCondition, remark, result.
 
 Pay attention to the fields: errorCondition, remark, result.
 
+### 7. Successful card reversal
+
+#### Assumptions
+
+- WPI version: `2.2`
+- The application is registered on a terminal with TID (Terminal ID) `POSTMAN1` and MID (Merchant ID) `102003271`.
+- Cleared, reversable card transaction with UUID "28f892c9-757a-4f45-9416-2b779f013d1d"
+
+#### WPI_REQUEST
+
+```json
+{
+   "paymentSolutionReference": "28f892c9-757a-4f45-9416-2b779f013d1d"
+}
+```
+
+#### Expected Application Behavior
+
+- Spinner is displayed in app.
+- The intent completes.
+- Transaction have changed status.
+
+#### WPI_RESPONCE
+
+```json
+{
+    "actionCode": "WPI_ACTION_CODE_NONE",
+    "errorCondition": "WPI_ERR_COND_NONE",
+    "merchantIdentifier": "102003271",
+    "reference": "28f892c9-757a-4f45-9416-2b779f013d1d",
+    "result": "WPI_RESULT_SUCCESS",
+    "terminalIdentifier": "POSTMAN1",
+    "terminalIdentifierLong": "ToM-POSTMAN1-102003271"
+}
+```
+Pay attention to the fields: errorCondition, result.
+
+
+
+### 8. Successful card refund
+
+#### Assumptions
+
+- WPI version: `2.2`
+- The application is registered on a terminal with TID (Terminal ID) `POSTMAN1` and MID (Merchant ID) `102003271`.
+- DCC is disabled on the terminal.
+- Tokenization is disabled.
+- The terminal currency is PLN.
+- Cleared, reversable card transaction with UUID "96d5f366-c958-45a3-8106-287659374b34"
+- The transaction and refund amount is PLN 15.00.
+- The CVM threshold is set to PLN 100.
+- The payment and the refund are made with a VISA card.
+- `receiptFormat` is not specified in the request, so the default format, `FORMATTED`, is used.
+
+#### WPI_REQUEST
+
+```json
+{
+   "currency": "PLN",
+   "requestedAmount": 1500,
+   "paymentSolutionReference": "96d5f366-c958-45a3-8106-287659374b34"
+}
+```
+
+#### Expected Application Behavior
+
+- The application displays a screen prompting the customer to tap their card. In this example, the VISA card is read successfully.
+- The payment scheme animation is displayed.
+- The intent completes.
+
+#### WPI_RESPONCE
+
+```json
+{
+    "actionCode": "WPI_ACTION_CODE_NONE",
+    "applicationIdentifier": "A0000000031010",
+    "applicationLabel": "VISA CREDIT",
+    "authorizedAmount": 1500,
+    "brandName": "WPI_BRAND_NAME_VISA",
+    "cardDataInput": "WPI_CARD_DATA_INPUT_PROXIMITY_ICC",
+    "cardholderVerificationMethod": "WPI_CVM_NO_CVM",
+    "currency": "PLN",
+    "customerLanguage": "en",
+    "errorCondition": "WPI_ERR_COND_NONE",
+    "expiryDate": "2912",
+    "merchantIdentifier": "102003271",
+    "onBehalf": false,
+    "onlineToken": "f4b07364-213b-40d0-b9da-dd2814c72843",
+    "paymentSolutionReference": "bf864707-eeec-4ffe-bcc9-eb95c41f0b25",
+    "receipt": {
+        "formatted": {
+            "client": "This is to confirm your transaction     \n registered at:                          \n ----------------------------------------\n APM TEST & Merchant                     \n APM street 1                            \n APM city 1234                           \n ----------------------------------------\n 03.11.2026 16:14:57                     \n VISA       412374******0013             \n PLN                                15.00\n Transaction details:                    \n Status:                          CLEARED\n Authorization code:           (00)000671\n ARQC:                   EF2B7AFFE614BE2E\n AID:                      A0000000031010\n Contactless                             \n Card expiry date:                   2912\n Type:                             REFUND\n POS ID:                         POSTMAN1\n MID:                           102003271\n Reference:                           (-)\n VISA\n ",
+            "merchant": "This is to confirm your transaction     \n registered at:                          \n ----------------------------------------\n APM TEST & Merchant                     \n APM street 1                            \n APM city 1234                           \n ----------------------------------------\n 03.11.2026 16:14:57                     \n VISA       412374******0013             \n PLN                                15.00\n Transaction details:                    \n Status:                          CLEARED\n Authorization code:           (00)000671\n ARQC:                   EF2B7AFFE614BE2E\n AID:                      A0000000031010\n Contactless                             \n Card expiry date:                   2912\n Type:                             REFUND\n POS ID:                         POSTMAN1\n MID:                           102003271\n Reference:                           (-)\n VISA\n "
+        }
+    },
+    "result": "WPI_RESULT_SUCCESS",
+    "terminalIdentifier": "POSTMAN1",
+    "terminalIdentifierLong": "ToM-POSTMAN1-102003271",
+    "timestamp": "2026-11-03T16:14:57+01:00"
+}
+```
+Pay attention to the fields: errorCondition, result.
+
+### 9. Successful card credit
+
+#### Assumptions
+
+- WPI version: `2.2`
+- The application is registered on a terminal with TID (Terminal ID) `POSTMAN1` and MID (Merchant ID) `102003271`.
+- DCC is disabled on the terminal.
+- Tokenization is disabled.
+- The terminal currency is PLN.
+- The transaction amount is PLN 15.00.
+- The credit is made with a VISA card.
+- `receiptFormat` is not specified in the request, so the default format, `FORMATTED`, is used.
+
+#### WPI_REQUEST
+
+```json
+{
+   "currency": "PLN",
+   "requestedAmount": 1500
+}
+```
+
+#### Expected Application Behavior
+
+- The application displays a screen prompting the customer to tap their card. In this example, the VISA card is read successfully.
+- The payment scheme animation is displayed.
+- The intent completes.
+
+#### WPI_RESPONCE
+
+```json
+{
+    "actionCode": "WPI_ACTION_CODE_NONE",
+    "applicationIdentifier": "A0000000031010",
+    "applicationLabel": "VISA CREDIT",
+    "authorizedAmount": 1500,
+    "brandName": "WPI_BRAND_NAME_VISA",
+    "cardDataInput": "WPI_CARD_DATA_INPUT_PROXIMITY_ICC",
+    "cardholderVerificationMethod": "WPI_CVM_NO_CVM",
+    "currency": "PLN",
+    "customerLanguage": "en",
+    "errorCondition": "WPI_ERR_COND_NONE",
+    "merchantIdentifier": "102003271",
+    "onBehalf": false,
+    "paymentSolutionReference": "8ac6daa3-1a39-42f8-b5d9-828fb6c2b519",
+    "receipt": {
+        "formatted": {
+            "client": "This is to confirm your transaction     \n registered at:                          \n ----------------------------------------\n APM TEST & Merchant                     \n APM street 1                            \n APM city 1234                           \n ----------------------------------------\n 03.11.2026 16:19:04                     \n VISA       412374******0013             \n PLN                                15.00\n Transaction details:                    \n Status:                          CLEARED\n Authorization code:           (00)000671\n ARQC:                   E502B3F82762DA47\n AID:                      A0000000031010\n Contactless                             \n Card expiry date:                   2912\n Type:                             CREDIT\n POS ID:                         POSTMAN1\n MID:                           102003271\n Reference:                           (-)\n VISA\n ",
+            "merchant": "This is to confirm your transaction     \n registered at:                          \n ----------------------------------------\n APM TEST & Merchant                     \n APM street 1                            \n APM city 1234                           \n ----------------------------------------\n 03.11.2026 16:19:04                     \n VISA       412374******0013             \n PLN                                15.00\n Transaction details:                    \n Status:                          CLEARED\n Authorization code:           (00)000671\n ARQC:                   E502B3F82762DA47\n AID:                      A0000000031010\n Contactless                             \n Card expiry date:                   2912\n Type:                             CREDIT\n POS ID:                         POSTMAN1\n MID:                           102003271\n Reference:                           (-)\n VISA\n "
+        }
+    },
+    "result": "WPI_RESULT_SUCCESS",
+    "terminalIdentifier": "POSTMAN1",
+    "terminalIdentifierLong": "ToM-POSTMAN1-102003271",
+    "timestamp": "2026-11-03T16:19:04+01:00"
+    }
+```
+Pay attention to the fields: errorCondition, result.
+
+
 [NEXT](../4_Worldline_Management_Interface/4_1_Interface_structure_and_activity_launch.MD)
