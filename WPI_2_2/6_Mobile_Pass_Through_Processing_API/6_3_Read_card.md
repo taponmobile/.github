@@ -38,5 +38,6 @@ In `MPPA_SVC_READ_CARD`, at a minimum, the currency, requested amount and transa
 |ptp_non_sensitive_tags|PTP non sensitive tags returned by host|String (Base64)|Mandatory for MPPA_OK|
 |masked_pan|Masked pan containing BIN on first 8 characters.|String|Mandatory for MPPA_OK|
 |kernel_outcome|Kernel processing outcome |String - Eum ("NA", "SELECT_NEXT", "TRY_AGAIN", "APPROVED", "DECLINED", "ONLINE_REQUEST", "TRY_ANOTHER_INTERFACE", "END_APPLICATION", "OUTCOME_REQUEST_SIGNATURE", "REQUEST_ONLINE_PIN", "ONLINE_REQUEST_TWO_PRESENTMENTS", "ONLINE_REQUEST_PRESENT_AND_HOLD", "END_APPLICATION_WITH_RESTART", "OUTCOME_EXTENSION_EXECUTE_ 3RD_PARTY_MASTERCARD_KERNEL", "TRANSACTION_PROCESSING_ERROR")|Optional - only if communication with the card took place and kernel returned outcome|
+|application_expiry_date|Application expiry date – format YYMM – e.g. ‘2912’ for 2029.12|String|Mandatory for MPPA_OK|
 
 [NEXT](./6_4_PIN_collect.md)
