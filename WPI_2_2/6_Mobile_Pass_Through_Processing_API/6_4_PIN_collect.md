@@ -41,5 +41,6 @@ In `MPPA_SVC_COLLECT_PIN`, at a minimum, the currency, requested amount, transac
 |transaction_status|Transaction status.<br><br>For **PIN_REQUESTED** - pin collection intent should be sent before card data collection<br><br>**PTP_READ** – card read completed.|String|Mandatory for MPPA_OK|
 |ptp_non_sensitive_tags|PTP non sensitive tags returned by host|String (Base64)|Mandatory for MPPA_OK|
 |masked_pan|Masked pan containing BIN on first 8 characters.|String|Mandatory for MPPA_OK|
+|application_expiry_date|Application expiry date – format YYMM – e.g. ‘2912’ for 2029.12|String|Optional for MPPA_OK|
 
 [NEXT](./6_5_trx_cancel.md)
